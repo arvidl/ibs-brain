@@ -1,4 +1,4 @@
-# Brain morphometry and cognition as predictors of irritable bowel syndrome
+# Brain morphometry and cognition as predictors of IBS
 
 INITIATED: [Arvid Lundervold](https://www.uib.no/en/persons/Arvid.Lundervold), 2024-10-21
 
