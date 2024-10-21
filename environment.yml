@@ -1,0 +1,30 @@
+name: ibs-brain
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - ydata-profiling
+      - pycaret[all]
+      - scikit-learn-intelex  # Optional, not for M1, M2, M3 on Mac
+      - jupyter
+      - openpyxl
+      - pyreadstat
+      - pingouin
+      - shap
+      - xgboost
+      - scikit-plot
+      - nibabel
+      - nilearn
+
+# To update the ibs environment (if new package versions become available):
+#conda update -n ibs-brain --all   # To update all packages in the named environment
+
+# To remove and reinstall the ibs-brain environment (if installation problems):
+#conda deactivate
+#conda env remove -n ibs-brain
+#   <fix installation>
+## Then, recreate the conda environment ibs-brain as above, or with
+#conda env update -f environmnet.yml
