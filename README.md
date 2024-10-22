@@ -2,7 +2,7 @@
 
 INITIATED: [Arvid Lundervold](https://www.uib.no/en/persons/Arvid.Lundervold), 2024-10-21
 
-[Code](https://github.com/arvidl/ibs-brain/tree/main/notebooks) and [data](./data) accompanying the paper: <br>
+[Code](https://github.com/arvidl/ibs-brain/tree/main/notebooks) and [data](./data) accompanying the [paper](https://github.com/arvidl/ibs-brain/blob/main/papers/Evaluation_of_brain_morphometry_and_clinical_data_in_IBS_diagnostics_20241022_2300.pdf): <br>
 
 Julie Billing, Ben René Bjørsvik, Daniela M. Pfabigan, Birgitte Berentsen, Gülen Arslan Lied, Elisabeth K Steinsvik, Trygve Hausken, Astri J. Lundervold, and Arvid Lundervold.
 **Brain morphometry and cognition as predictors of irritable bowel syndrome.**
