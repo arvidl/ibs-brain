@@ -9,7 +9,7 @@ Julie Billing, Ben René Bjørsvik, Daniela M. Pfabigan, Birgitte Berentsen, Gü
 In prep.
 
 
-![img](./assets/ASEG_Native_cross_in_Left_Thalamus_BGA_046.png)
+![img](https://github.com/arvidl/ibs-brain/blob/main/figs/ASEG_Native_cross_in_Left_Thalamus_BGA_046.png)
 
 **ABSTRACT** (in prep.)
 
