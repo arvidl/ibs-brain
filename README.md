@@ -6,7 +6,7 @@ INITIATED: [Arvid Lundervold](https://www.uib.no/en/persons/Arvid.Lundervold), 2
 
 Julie Billing, Ben René Bjørsvik, Daniela M. Pfabigan, Birgitte Berentsen, Gülen Arslan Lied, Elisabeth K Steinsvik, Trygve Hausken, Astri J. Lundervold, and Arvid Lundervold.
 **Brain morphometry and cognition as predictors of irritable bowel syndrome.**
-In prep.
+_In prep._
 
 
 ![img](https://github.com/arvidl/ibs-brain/blob/main/figs/ASEG_Native_cross_in_Left_Thalamus_BGA_046.png)
