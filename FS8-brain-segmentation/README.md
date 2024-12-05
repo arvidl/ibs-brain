@@ -398,16 +398,18 @@ using subject-specific atlases. Neuroimage 141, 2016, 542-555.
 http://doi.org/10.1016/j.neuroimage.2016.07.020
 
 
-## mri_histo_atlas_segment
+### mri_histo_atlas_segment
 
 ```bash
 mri_histo_atlas_segment --help
- 
+``` 
 Bayesian segmentation with histological whole brain atlas.
  
 Next-Generation histological atlas for high-resolution segmentation of human brain MRI
 Casamitjana et al. (in preparation)
- 
+
+#### Usage
+```bash
 Usage:
    mri_histo_atlas_segment INPUT_SCAN OUTPUT_DIRECTORY ATLAS_MODE GPU THREADS [BF_MODE] [GMM_MODE]
  
@@ -471,6 +473,10 @@ The options are similar to mri_histo_atlas_segment, but the atlas and gmm modes 
 
 This faster version is particularly useful if you are running the code on the CPU rather than CPU. On a semi-modern desktop, the run time should be less than an hour (note that it segments both hemispheres in a single run, as opposed to the full Bayesian version).
 
+In our case (BGA_046):
+```bash
+BGA_046 % mri_histo_atlas_segment_fast BGA_046_native.nii.gz Histo_atlas_segment 0 -1
+```
 
 #### Frequently asked questions (FAQ)
 - Do I really need a GPU for the 'full' Bayesian version?
