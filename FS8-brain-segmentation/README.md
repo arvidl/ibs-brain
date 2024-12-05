@@ -477,6 +477,70 @@ In our case (BGA_046):
 ```bash
 BGA_046 % mri_histo_atlas_segment_fast BGA_046_native.nii.gz Histo_atlas_segment 0 -1
 ```
+Gives (after copying)
+```bash
+sudo cp mri_histo_atlas_segment_fast.sh /Applications/freesurfer/8.0.0-beta/bin/mri_histo_atlas_segment_fast
+sudo chmod +x /Applications/freesurfer/8.0.0-beta/bin/mri_histo_atlas_segment_fast
+sudo cp segment_fast.py /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation//scripts/
+sudo cp atlas.nii.gz /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation/data_mni/
+```
+the following:
+```bash
+BGA_046 % mri_histo_atlas_segment_fast BGA_046_native.nii.gz Histo_atlas_segment 0 -1       
+Running command:
+fspython /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation//scripts/segment_fast.py --i BGA_046_native.nii.gz --i_seg Histo_atlas_segment/SynthSeg.mgz --i_field Histo_atlas_segment/atlas_registration.nii.gz --atlas_dir /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation//atlas_simplified --o Histo_atlas_segment --bf_mode dct --threads -1 --resolution 0.4 --skip 3 --synthmorph_reg 0.05 --write_bias_corrected --cpu
+  
+using all available threads ( 16 )
+Warning: output directory exists (I will still proceed))
+Using the CPU
+Current Time = 10:58:27
+Reading input image
+Running SynthSeg
+....
+FileNotFoundError: /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation/data_mni/atlas.nii.gz is not a file
+....
+Current Time = 11:10:35
+Reading input image
+Found input synthseg segmentation
+Input segmentation exists; making sure it includes parcellation!
+INFO: using NIfTI-1 sform (sform_code=1)
+Correcting bias field
+   Trying model with polynomial basis functions
+Gaussian filtering for bias field correction
+  Using DCT basis functions
+Bias field correction
+  Iteration 1: difference is 2.076913595199585
+  Iteration 2: difference is 0.032503336668014526
+....
+  Iteration 41: difference is 9.538921403873246e-07
+  Converged
+Normalizing intensities
+   Running SynthMorph
+/Applications/freesurfer/8.0.0-beta/python/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+  Creating and applying mask
+  Creating and applying mask
+Reading in atlas
+using all available threads ( 16 )
+Warning: output directory exists (I will still proceed))
+Using the CPU
+Current Time = 11:15:40
+Reading input image
+Found input synthseg segmentation
+Input segmentation exists; making sure it includes parcellation!
+INFO: using NIfTI-1 sform (sform_code=1)
+Correcting bias field
+   Trying model with polynomial basis functions
+Gaussian filtering for bias field correction
+  Using DCT basis functions
+Bias field correction
+  Iteration 1: difference is 2.076913595199585
+  Iteration 2: difference is 0.032503336668014526
+  Iteration 3: difference is 0.00 ....
+...
+
+
+```
 
 #### Frequently asked questions (FAQ)
 - Do I really need a GPU for the 'full' Bayesian version?
