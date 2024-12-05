@@ -397,3 +397,66 @@ and Reuter, M., Bayesian longitudinal segmentation of hippocampal substructures 
 using subject-specific atlases. Neuroimage 141, 2016, 542-555. 
 http://doi.org/10.1016/j.neuroimage.2016.07.020
 
+
+## mri_histo_atlas_segment
+
+```bash
+mri_histo_atlas_segment --help
+ 
+Bayesian segmentation with histological whole brain atlas.
+ 
+Next-Generation histological atlas for high-resolution segmentation of human brain MRI
+Casamitjana et al. (in preparation)
+ 
+Usage:
+   mri_histo_atlas_segment INPUT_SCAN OUTPUT_DIRECTORY ATLAS_MODE GPU THREADS [BF_MODE] [GMM_MODE]
+ 
+INPUT SCAN: scan to process, in mgz or nii(.gz) format
+OUTPUT_DIRECTORY: directory with segmentations, volume files, etc
+ATLAS_MODE: must be full (all 333 labels) or simplified (simpler brainstem protocol; recommended)
+GPU: set to 1 to use the GPU (*highly* recommended but requires a 24GB GPU!)
+THREADS: number of CPU threads to use (use -1 for all available threads)
+BF_MODE (optional): bias field model: dct (default), polynomial, or hybrid
+GMM_MODE (optional): must be 1mm (default) unless you define your own (see documentation)
+```
+
+For example, you can segment bert with a GPU and 8 CPU threads with:
+```bash
+mri_histo_atlas_segment $SUBJECTS_DIR/bert/mri/orig.mgz $SUBJECTS_DIR/bert/mri/histo_atlas_segmentation/ simplified 1 8
+```
+
+In the output directory, you will find:
+```bash
+bf_corrected.mgz: a bias field corrected version of the input scan.
+
+SynthSeg.mgz: SynthSeg segmentation of the input (which we use in preprocessing and to initialize Gaussian parameters).
+
+MNI_registration.mgz: EasyReg registration to MNI space, use in preprocessing.
+
+seg_[left/right].mgz: segmentation into 333 ROIs of the left and right hemisphere, respectively.
+
+vols_[left/right].csv: CSV spreadsheet with the volumes of the different ROIs, computed from the posteriors (soft segmentations).
+
+lookup_table.txt: FreeSurfer lookup table mapping label indices to brain anatomy. You need it when visualizing the segmentations with Freeview.
+```
+
+In our case (BGA_046):
+```bash
+BGA_046 % mri_histo_atlas_segment BGA_046_native.nii.gz Histo_atlas_segment simplified 0 -1 
+```
+Gives (first time):
+```bash
+   Atlas files not found for mode simplified. Please download atlas from: 
+      https://ftp.nmr.mgh.harvard.edu/pub/dist/lcnpublic/dist/Histo_Atlas_Iglesias_2023/atlas_simplified.zip 
+   and uncompress it into:  
+      /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation// 
+   You only need to do this once for mode simplified. You can use the following three commands (may require root access): 
+      1: cd /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation/
+      2a (in Linux): wget https://ftp.nmr.mgh.harvard.edu/pub/dist/lcnpublic/dist/Histo_Atlas_Iglesias_2023/atlas_simplified.zip 
+      2b (in MAC): curl -o atlas.zip https://ftp.nmr.mgh.harvard.edu/pub/dist/lcnpublic/dist/Histo_Atlas_Iglesias_2023/atlas_simplified.zip 
+      3. unzip atlas_simplified.zip
+ 
+   After correct extraction, the directory: 
+      /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation//atlas_simplified 
+   should contain files: size.npy, label_001.npz, label_002.npz, ...
+```
