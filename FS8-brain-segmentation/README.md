@@ -460,3 +460,39 @@ Gives (first time):
       /Applications/freesurfer/8.0.0-beta/python/packages/ERC_bayesian_segmentation//atlas_simplified 
    should contain files: size.npy, label_001.npz, label_002.npz, ...
 ```
+
+### Usage (fast version)
+We also distribute a fast version, where the atlas deformation is pre-computed with a neural network, and then kept constant during the optimization, such that we only need to run the EM algorithm once for the Gaussian parameters and that is it.
+
+```bash
+mri_histo_atlas_segment_fast INPUT_SCAN OUTPUT_DIRECTORY GPU THREADS [BF_MODE]
+```
+The options are similar to mri_histo_atlas_segment, but the atlas and gmm modes are always 'simplified' and '1mm', respectively. The output files in the output directory follow the same convention.
+
+This faster version is particularly useful if you are running the code on the CPU rather than CPU. On a semi-modern desktop, the run time should be less than an hour (note that it segments both hemispheres in a single run, as opposed to the full Bayesian version).
+
+
+#### Frequently asked questions (FAQ)
+- Do I really need a GPU for the 'full' Bayesian version?
+
+Technically, no. In practice, yes. On a modern GPU, the code runs in an hour or less. On the CPU, it depends on the number of threads, but it can easily take a whole day or more.
+
+- Do I need a GPU for the fast version?
+
+Certainly no! The code should run in less than an hour on any semi-modern workstation, if you allocate enough threads.
+
+- What do the BF_MODE and GMM_MODE arguments do?
+
+You should not need to touch these, but the BF_MODE changes the set of basis functions for bias field correction and you could potentially try tinkering with it if the bias field correction fails (i.e., if bf_corrected.mgz has noticeable bias). GMM_MODE allows you to change the grouping of ROIs into tissue classes (advanced mode!). The GMM model is crucial as it determines how different brain regions are grouped into tissue types for the purpose of image intensity modeling. This is specified though a set of files that should be found under 'data' in the atlas directory:
+
+- data/gmm_components_[GMM_MODE].yaml: defines tissue classes and specificies the number of components of the corresponding GMM
+
+- data/combined_aseg_labels_[GMM_MODE].yaml defines the labels that belong to each tissue class
+
+- data/combined_atlas_labels_[GMM_MODE].yaml defines FreeSurfer ('aseg') labels that are used to initialize the parameters of each class.
+
+Note that, in in dev versions newer than August 23 2024, these files are located under data_full and data_simplified (one directory per atlas / protocol).
+
+We distribute a GMM_MODE named "1mm" that we have used in our experiments, and which is the default mode of the code. If you want to use your own model, you will need to create another triplet of files of your own (use the 1mm version as template).
+
+
