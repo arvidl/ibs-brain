@@ -664,6 +664,11 @@ hemispheres in a single run, as opposed to the full Bayesian version).
 
 ## Atlas names and labels
 
+Note: 
+- substantia_nigra__reticular_part: 310
+- substantia_nigra__compact_part: 352
+
+  
 https://github.com/freesurfer/freesurfer/blob/dev/mri_histo_util/ERC_bayesian_segmentation/data_full/atlas_names_and_labels.yaml
 
 ```bash
