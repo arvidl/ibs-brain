@@ -1008,3 +1008,68 @@ Atlas Names and Labels:
 - ctx-rh-transversetemporal: 2034
 - ctx-rh-insula: 2035
 ```
+Running BGA_046_native.nii.gz on DGX-station:
+
+```bash
+arvid@med233017:~/FS8/data/BGA_046$ fspython -c "import tensorflow as tf; print(tf.config.list_physical_devices())"
+2024-12-05 16:48:07.940909: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-05 16:48:08.935755: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU'), PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:2', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:3', device_type='GPU')]
+
+....
+
+arvid@med233017:~/FS8/data/BGA_046$ mri_histo_atlas_segment BGA_046_native.nii.gz Histo_atlas_segment full 1 -1
+ 
+Output directory already exists, no need to create it
+  
+******************************
+* Working on left hemisphere *
+******************************
+  
+Running command:
+fspython /usr/local/freesurfer/8.0.0-dev/python/packages/ERC_bayesian_segmentation//scripts/segment.py --i BGA_046_native.nii.gz --atlas_mode full --gmm_mode 1mm --bf_mode dct --i_seg Histo_atlas_segment/SynthSeg.mgz --o_synthseg_vols Histo_atlas_segment/SynthSeg.vols.csv --i_field Histo_atlas_segment/MNI_registration.mgz --atlas_dir /usr/local/freesurfer/8.0.0-dev/python/packages/ERC_bayesian_segmentation//atlas_full --hemi l --o_bf_corr Histo_atlas_segment/bf_corrected.mgz --o Histo_atlas_segment/seg_left.mgz --o_vol Histo_atlas_segment/vols_left.csv --threads -1
+  
+using all available threads ( 40 )
+Current Time = 16:58:29
+Reading input image
+Found input synthseg segmentation
+Input segmentation exists; making sure it includes parcellation!
+INFO: using NIfTI-1 sform (sform_code=1)
+Correcting bias field
+   Trying model with polynomial basis functions
+Gaussian filtering for bias field correction
+  Using DCT basis functions
+Bias field correction
+  Iteration 1: difference is 2.076545476913452
+  Iteration 2: difference is 0.032584838569164276
+  Iteration 3: difference is 0.004885711241513491
+  Iteration 4: difference is 0.005110548809170723
+  Iteration 5: difference is 0.004215816501528025
+
+
+...
+...
+...
+
+329 /usr/local/freesurfer/8.0.0-dev/python/packages/ERC_bayesian_segmentation//atlas_full/label_330.npz
+330 /usr/local/freesurfer/8.0.0-dev/python/packages/ERC_bayesian_segmentation//atlas_full/label_331.npz
+331 /usr/local/freesurfer/8.0.0-dev/python/packages/ERC_bayesian_segmentation//atlas_full/label_332.npz
+332 /usr/local/freesurfer/8.0.0-dev/python/packages/ERC_bayesian_segmentation//atlas_full/label_333.npz
+333 /usr/local/freesurfer/8.0.0-dev/python/packages/ERC_bayesian_segmentation//atlas_full/label_334.npz
+Reading in label 334 of 334
+
+Writing results to disk
+freeview -v BGA_046_native.nii.gz -v Histo_atlas_segment/seg_right.mgz:colormap=lut:lut=/usr/local/freesurfer/8.0.0-dev/python/packages/ERC_bayesian_segmentation/data_full/AllenAtlasLUT
+oocalc Histo_atlas_segment/vols_right.csv
+All done!
+Current Time = 05:29:22
+Running Time = 6:49:45.115630
+  
+*****************
+* All done!!!!! *
+*****************
+  
+arvid@med233017:~/FS8/data/BGA_046$ 
+```
+
