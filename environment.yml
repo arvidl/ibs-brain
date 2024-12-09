@@ -18,7 +18,7 @@ dependencies:
       - scikit-plot
       - nibabel
       - nilearn
-      - henze-zirkler
+
 
 # To update the ibs environment (if new package versions become available):
 #conda update -n ibs-brain --all   # To update all packages in the named environment
