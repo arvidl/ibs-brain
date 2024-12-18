@@ -8,7 +8,7 @@ __pycache__/
 .ipynb_checkpoints
 
 # Logs
-notebooks/logs.log
+*/logs.log
 
 # Local nbs - not on repo
 MyNotebooks/
