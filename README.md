@@ -24,5 +24,17 @@ GitHub: https://github.com/arvidl/ibs-brain
 **Keywords**<br>
 Irritable bowel syndrome; structural MRI; brain morphometry, cognition; supervised classification; machine learning; open-source
 
+
+
+### Notebooks
+
+- 01-freesurfer-freeview-t1-aseg-bga-046.ipynb
+- 02-demographics-and-clinical-characteristics.ipynb
+- 03-replication-anaysis-fs6.ipynb
+- 04-comparing-FS-versions-on-same-dataset.ipynb
+- 05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb
+- 06-morphometry-cognition-exploration.ipynb
+- 07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb
+  
 ----
 Last updated: 2024-12-22
