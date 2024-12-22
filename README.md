@@ -28,13 +28,15 @@ Irritable bowel syndrome; structural MRI; brain morphometry, cognition; supervis
 
 ### Notebooks
 
-- 01-freesurfer-freeview-t1-aseg-bga-046.ipynb
-- 02-demographics-and-clinical-characteristics.ipynb
-- 03-replication-anaysis-fs6.ipynb
-- 04-comparing-FS-versions-on-same-dataset.ipynb
-- 05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb
-- 06-morphometry-cognition-exploration.ipynb
-- 07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb
+Every figure and table in the manuscript is linked (in the caption) to the corresponding notebook:
+
+- 01-freesurfer-freeview-t1-aseg-bga-046.ipynb (Fig. 1, Fig. 2, Fig. A2)
+- 02-demographics-and-clinical-characteristics.ipynb (Tab. 2)
+- 03-replication-analysis-fs6.ipynb (Tab. 3, Fig. 3, Fig. 4)
+- 04-comparing-FS-versions-on-same-dataset.ipynb (Fig. 5, Fig. 6, Fig. 7, Fig. 8)
+- 05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb (Fig. 9, Fig. 10)
+- 06-morphometry-cognition-exploration.ipynb (Tab. 4, Fig. 11)
+- 07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb (Fig. 12, Tab. 6, Fig. 13)
   
 ----
 Last updated: 2024-12-22
