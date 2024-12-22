@@ -28,7 +28,7 @@ Irritable bowel syndrome; structural MRI; brain morphometry, cognition; supervis
 
 ### Notebooks
 
-Every figure and table in the manuscript is linked (in the caption) to the corresponding notebook:
+Every figure and table in the manuscript is linked (in its caption) to the corresponding notebook:
 
 - 01-freesurfer-freeview-t1-aseg-bga-046.ipynb (Fig. 1, Fig. 2, Fig. A2)
 - 02-demographics-and-clinical-characteristics.ipynb (Tab. 2)
