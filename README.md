@@ -35,7 +35,7 @@ Every figure and table in the manuscript is linked (in its caption) to the corre
 - [03-replication-analysis-fs6.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/03-replication-analysis-fs6.ipynb) (Tab. 3, Fig. 3, Fig. 4)
 - [04-comparing-FS-versions-on-same-dataset.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/04-comparing-FS-versions-on-same-dataset.ipynb) (Fig. 5, Fig. 6, Fig. 7, Fig. 8, Tab. A2, Tab. A3)
 - [05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb) (Fig. 9, Fig. 10, Fig. A1)
-- [06-morphometry-cognition-exploration.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/06-morphometry-cognition-exploration.ipynb) (Tab. 4, Fig. 11)
+- [06-morphometry-cognition-exploration.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/06-morphometry-cognition-exploration.ipynb) (Tab. 4, [Fig. 11](https://github.com/arvidl/ibs-brain/blob/main/figs/spearman_correlation_matrix_RBANS_ASEG.png))
 - [07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb) (Fig. 12, Tab. 5, Fig. 13)
   
 ----
