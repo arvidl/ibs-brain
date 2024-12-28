@@ -37,6 +37,9 @@ Every figure and table in the manuscript is linked (in its caption) to the corre
 - [05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb) $\rightarrow$ {Fig. 9, Fig. 10, Fig. A1}
 - [06-morphometry-cognition-exploration.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/06-morphometry-cognition-exploration.ipynb) $\rightarrow$ {Tab. 4, [Fig. 11](https://github.com/arvidl/ibs-brain/blob/main/figs/spearman_correlation_matrix_RBANS_ASEG.png)}
 - [07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb) $\rightarrow$ {[Fig. 12a](https://github.com/arvidl/ibs-brain/blob/main/figs/annotated_xgboost_confusion_matrix_using_ASEG_and_RBANS.png), Fig. 12b, Tab. 5, Fig. 13}
+
+
+Conda environment `ibs-brain`: [environment.yml](https://github.com/arvidl/ibs-brain/blob/main/environment.yml)
   
 ----
 Last updated: 2024-12-28
