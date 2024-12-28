@@ -31,12 +31,12 @@ Irritable bowel syndrome; structural MRI; brain morphometry, cognition; supervis
 Every figure and table in the manuscript is linked (in its caption) to the corresponding notebook:
 
 - [01-freesurfer-freeview-t1-aseg-bga-046.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/01-freesurfer-freeview-t1-aseg-bga-046.ipynb) $\rightarrow$ {Fig. 1, Fig. 2, [Fig. A2](https://github.com/arvidl/ibs-brain/blob/main/figs/Histo_atlas_segentation_fs8_BGA_046.png)}
-- [02-demographics-and-clinical-characteristics.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/02-demographics-and-clinical-characteristics.ipynb) ([Tab. 2](https://github.com/arvidl/ibs-brain/blob/main/latex/tables/demographic_characteristics_table.tex))
-- [03-replication-analysis-fs6.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/03-replication-analysis-fs6.ipynb) (Tab. 3, Fig. 3, Fig. 4)
-- [04-comparing-FS-versions-on-same-dataset.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/04-comparing-FS-versions-on-same-dataset.ipynb) ([Fig. 5](https://github.com/arvidl/ibs-brain/blob/main/figs/fs6_cross_vs_fs7_cross_version_comparison.png), Fig. 6, Fig. 7, Fig. 8, Tab. A2, Tab. A3)
-- [05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb) (Fig. 9, Fig. 10, Fig. A1)
-- [06-morphometry-cognition-exploration.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/06-morphometry-cognition-exploration.ipynb) (Tab. 4, [Fig. 11](https://github.com/arvidl/ibs-brain/blob/main/figs/spearman_correlation_matrix_RBANS_ASEG.png))
-- [07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb) ([Fig. 12a](https://github.com/arvidl/ibs-brain/blob/main/figs/annotated_xgboost_confusion_matrix_using_ASEG_and_RBANS.png), Fig. 12b, Tab. 5, Fig. 13)
+- [02-demographics-and-clinical-characteristics.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/02-demographics-and-clinical-characteristics.ipynb) $\rightarrow$ {[Tab. 2](https://github.com/arvidl/ibs-brain/blob/main/latex/tables/demographic_characteristics_table.tex)}
+- [03-replication-analysis-fs6.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/03-replication-analysis-fs6.ipynb) $\rightarrow$ {Tab. 3, Fig. 3, Fig. 4}
+- [04-comparing-FS-versions-on-same-dataset.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/04-comparing-FS-versions-on-same-dataset.ipynb) $\rightarrow$ {[Fig. 5](https://github.com/arvidl/ibs-brain/blob/main/figs/fs6_cross_vs_fs7_cross_version_comparison.png), Fig. 6, Fig. 7, Fig. 8, Tab. A2, Tab. A3}
+- [05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/05-predicting-IBS-vs-HC-from-morphometric-measures.ipynb) $\rightarrow$ {Fig. 9, Fig. 10, Fig. A1}
+- [06-morphometry-cognition-exploration.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/06-morphometry-cognition-exploration.ipynb) $\rightarrow$ {Tab. 4, [Fig. 11](https://github.com/arvidl/ibs-brain/blob/main/figs/spearman_correlation_matrix_RBANS_ASEG.png)}
+- [07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb](https://github.com/arvidl/ibs-brain/blob/main/notebooks/07-predicting-IBS-vs-HC-from-morphometry-and-cognition.ipynb) $\rightarrow$ {[Fig. 12a](https://github.com/arvidl/ibs-brain/blob/main/figs/annotated_xgboost_confusion_matrix_using_ASEG_and_RBANS.png), Fig. 12b, Tab. 5, Fig. 13}
   
 ----
 Last updated: 2024-12-28
