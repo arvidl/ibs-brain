@@ -18,6 +18,7 @@ dependencies:
       - scikit-plot
       - nibabel
       - nilearn
+      - optuna
 
 
 # To update the ibs environment (if new package versions become available):
