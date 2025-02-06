@@ -19,6 +19,7 @@ dependencies:
       - nibabel
       - nilearn
       - optuna
+      - optuna-integration[sklearn]
 
 
 # To update the ibs environment (if new package versions become available):
