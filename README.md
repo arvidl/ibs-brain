@@ -42,4 +42,4 @@ Every figure and table in the manuscript is linked (in its caption) to the corre
 Conda environment `ibs-brain`: [environment.yml](https://github.com/arvidl/ibs-brain/blob/main/environment.yml)
   
 ----
-Updated: 2024-12-28; 2025-02-10
+Updated: 2024-12-28; 2025-02-12
