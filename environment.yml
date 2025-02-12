@@ -20,6 +20,7 @@ dependencies:
       - nilearn
       - optuna
       - optuna-integration[sklearn]
+      - adjustText
 
 
 # To update the ibs environment (if new package versions become available):
